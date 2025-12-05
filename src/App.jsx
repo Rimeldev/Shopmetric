@@ -9,13 +9,17 @@ import ProductsPage from './components/ProductsPage.jsx'
 import SalesChannels from './components/SalesChannels.jsx'
 import SettingsPage from './components/SettingsPage.jsx'
 import ReportsPage from './components/ReportsPage.jsx'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 function App() {
 
 
   return (
     <>
      <Routes>
+
+      {/* Redirection automatique */}
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        
  <Route
         path="/dashboard"
         element={
