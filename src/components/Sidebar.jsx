@@ -162,8 +162,15 @@ export default function DashboardLayout({ children, activeItem = 'dashboard' }) 
         <header className="bg-base-100 border-b border-base-300">
           <div className="flex items-center justify-between px-4 sm:px-6 py-4">
             
-            {/* Search */}
+           {/* Search */}
             <div className="flex items-center gap-2 sm:gap-4 flex-1">
+              {/* Mobile menu button */}
+              <button 
+                onClick={() => setSidebarOpen(true)}
+                className="btn btn-ghost btn-sm lg:hidden"
+              >
+                <Menu size={20} />
+              </button>
               
               <div className="relative max-w-md w-full hidden sm:block">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 opacity-60" size={18} />
